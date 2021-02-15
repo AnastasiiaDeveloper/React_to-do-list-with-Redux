@@ -1,0 +1,34 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "important": false,
+      "text": "text"
+    },
+    {
+      "id": 2,
+      "important": true,
+      "text": "text 2"
+    },
+    {
+      "id": 3,
+      "important": false,
+      "text": "text 3"
+    },
+    {
+      "id": 4,
+      "important": true,
+      "text": "text 4"
+    },
+    {
+      "id": 5,
+      "important": true,
+      "text": "text 5"
+    },
+    {
+      "id": 6,
+      "important": true,
+      "text": "text 6"
+    }
+  ]
+}
