@@ -5,9 +5,9 @@ const List = () => {
   const arr = useSelector((store) => store.arr);
   const loaderState = useSelector((state) => state.loader);
 
-  const list = arr.map(({ text, id, important }) => (
+  const list = arr.map(({ text, id, important, done }) => (
     // <p key={idx}>{el.text}</p>
-    <ListIt id={id} key={id} text={text} important={important} />
+    <ListIt id={id} key={id} text={text} important={important} done={done} />
   ));
   return (
     <div>

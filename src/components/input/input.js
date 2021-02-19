@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask, setLoader } from "./../../redux/action";
+import { thunkAddTask, setLoader } from "./../../redux/action";
+
 
 const Input = () => {
   const [valueText, setValueText] = useState("");
@@ -9,7 +10,7 @@ const Input = () => {
   const sendData = () => {
     dispatch(setLoader(true));
     setTimeout(() => {
-      dispatch(addTask(valueText));
+      dispatch(thunkAddTask(valueText));
       dispatch(setLoader(false));
     }, 2 * 1000);
   };

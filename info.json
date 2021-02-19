@@ -6,11 +6,6 @@
       "text": "text"
     },
     {
-      "id": 2,
-      "important": true,
-      "text": "text 2"
-    },
-    {
       "id": 3,
       "important": false,
       "text": "text 3"
@@ -21,14 +16,29 @@
       "text": "text 4"
     },
     {
-      "id": 5,
-      "important": true,
-      "text": "text 5"
-    },
-    {
       "id": 6,
       "important": true,
       "text": "text 6"
+    },
+    {
+      "important": false,
+      "text": "text",
+      "id": 7
+    },
+    {
+      "important": false,
+      "text": "text",
+      "id": 8
+    },
+    {
+      "important": false,
+      "text": "text",
+      "id": 9
+    },
+    {
+      "important": false,
+      "text": "hgfhgvh",
+      "id": 10
     }
   ]
 }

@@ -5,6 +5,7 @@ import {
   SAVE_EDIT,
   IMPORTANT,
   LOAD_DATA,
+  DONE,
 } from "./../actionType";
 import { v4 as uuidv4 } from "uuid";
 
@@ -71,6 +72,23 @@ export default function counter(state = initialState, action) {
         const updatedArr = state.arr.map((el) => {
           if (el.id === id) {
             return { ...el, important: important ? false : true };
+          }
+          return el;
+        });
+        return {
+          ...state,
+          arr: updatedArr,
+        };
+      }
+      break;
+
+      case DONE:
+      {
+        const { id, done } = action;
+        console.log("DONE REDUCER", id, done);
+        const updatedArr = state.arr.map((el) => {
+          if (el.id === id) {
+            return { ...el, done: done ? false : true };
           }
           return el;
         });

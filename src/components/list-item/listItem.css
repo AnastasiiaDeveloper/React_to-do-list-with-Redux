@@ -1,0 +1,28 @@
+.switchButton {
+    color: white;
+    background-color: green;
+    outline: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .active {
+    background-color: red;
+  }
+
+
+  .switchButton2 {
+    color:black;
+    background-color: white;
+    outline: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: line-through;
+
+  }
+  
+  .active2 {
+    text-decoration: none;
+  }
