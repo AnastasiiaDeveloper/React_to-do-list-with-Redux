@@ -43,9 +43,14 @@ export const handleImportant = (id, important) => {
     id,
   };
 };
+
 export const loadDataAction = (data) => {
-  return { type: LOAD_DATA, data };
+  return {
+     type: LOAD_DATA,
+      data
+     };
 };
+
 export const thunkLoadData = () => {
   return (dispatch) => {
     axios.get("http://localhost:3004/list").then((data) => {

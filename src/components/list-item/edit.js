@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { saveEdit } from "./../../redux/action";
+import { saveEdit } from "../../reduxToolkit/toolkitReducer";
 
 const Edit = ({ text, id, setEdit }) => {
   const [editText, setEditText] = useState(text);
@@ -8,7 +8,7 @@ const Edit = ({ text, id, setEdit }) => {
 
   const saveItem = () => {
     setEdit(false);
-    dispatch(saveEdit(editText,id));
+    dispatch(saveEdit({ text: editText, id }));
   };
   return (
     <div>

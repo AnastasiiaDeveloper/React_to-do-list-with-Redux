@@ -9,12 +9,12 @@ const middleware = getDefaultMiddleware({
   serializableCheck: false,
   thunk: true,
 });
-const rootReducer = combineReducers({
-  toolkit: reducer,
-});
+// const rootReducer = combineReducers({
+//   toolkit: reducer,
+// });
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer,
   middleware,
 });
 export default store;

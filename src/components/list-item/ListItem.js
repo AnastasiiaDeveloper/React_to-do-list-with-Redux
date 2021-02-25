@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import Loader from "../loader/loader";
 import { useState } from "react";
-import { deleteTask, handleImportant } from "./../../redux/action";
+import { deleteTask, importantSlice } from "../../reduxToolkit/toolkitReducer";
 import Edit from "./edit";
 
 const ListIt = ({ id, text, important }) => {
@@ -13,13 +13,19 @@ const ListIt = ({ id, text, important }) => {
     setTimeout(() => {
       setLoader(false);
       dispatch(deleteTask(id));
+      // payload === id
+
+
+      // dispatch(deleteTask({id}));
+    
     }, 1000);
   };
   const editItem = () => {
     setEdit(true);
   };
   const setImportant = () => {
-    dispatch(handleImportant(id, important));
+    dispatch(importantSlice({ id, important }));
+    // payload.id or payload.important
     /// dispatch set important
   };
   return (

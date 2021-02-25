@@ -4,14 +4,17 @@ import List from "./components/list/list";
 import { useEffect } from "react";
 import axios from "axios";
 import { thunkLoadData } from "./redux/action";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const App = () => {
   const dispatch = useDispatch();
-
+  const state = useSelector((state) => state);
   useEffect(() => {
     dispatch(thunkLoadData());
   }, []);
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
   return (
     <div className="App">
       <Input />
